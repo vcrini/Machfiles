@@ -1,5 +1,5 @@
 #!/bin/sh
-export ZDOTDIR=$HOME/.config/zsh
+# ZDOTDIR
 HISTFILE=~/.zsh_history
 setopt appendhistory
 
@@ -62,13 +62,16 @@ bindkey -r "^u"
 bindkey -r "^d"
 
 # FZF 
+# [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+[ -f /usr/local/opt/fzf/shell/completion.zsh ] && source /usr/local/opt/fzf/shell/completion.zsh 
+
+#[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/local/opt/fzf/shell/key-bindings.zsh ] && source /usr/local/opt/fzf/shell/key-bindings.zsh 
 # TODO update for mac
-[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
 [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f $ZDOTDIR/completion/_fnm ] && fpath+="$ZDOTDIR/completion/"
+#[ -f $ZDOTDIR/completion/_fnm ] && fpath+="$ZDOTDIR/completion/"
 # export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 compinit
 
@@ -77,23 +80,22 @@ autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line
 
 # TODO Remove these
-setxkbmap -option caps:escape
-xset r rate 210 40
+#setxkbmap -option caps:escape
+#xset r rate 210 40
 
 # Speedy keys
-# xset r rate 210 40
+#xset r rate 210 40
 
 # Environment variables set everywhere
 export EDITOR="nvim"
-export TERMINAL="alacritty"
-export BROWSER="brave"
+#export TERMINAL="alacritty"
+#export BROWSER="brave"
 
 # For QT Themes
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 # remap caps to escape
-# setxkbmap -option caps:escape
+#setxkbmap -option caps:escape
 # swap escape and caps
 # setxkbmap -option caps:swapescape
-
 
