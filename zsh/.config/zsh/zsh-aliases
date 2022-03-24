@@ -80,4 +80,5 @@ esac
 alias ovim=nvim
 alias vim='XDG_CONFIG_HOME=~/.nvimconfig  nvim'
 alias vi=vim
-
+# adding Z
+. $HOME/bin/z.sh
