@@ -2,7 +2,7 @@
 # alias j='z'
 # alias f='zi'
 alias g='lazygit'
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias zsh-update-plugins="find $ZDOTDIR/plugins -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 # alias nvimrc='nvim ~/.config/nvim/'
 
 # alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
@@ -81,4 +81,6 @@ alias ovim=nvim
 alias vim='XDG_CONFIG_HOME=~/.nvimconfig  nvim'
 alias vi=vim
 # adding Z
-. $HOME/bin/z.sh
+. "$HOME/bin/z.sh"
+# adding any archive extraction
+. "$ZDOTDIR/plugins/zsh-extract/extract.plugin.zsh"
