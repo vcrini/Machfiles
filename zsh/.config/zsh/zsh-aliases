@@ -77,6 +77,7 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	;;
 esac
 # alias ovim='XDG_CONFIG_HOME=~/.nvimconfig vim -u ~/.vimrc'
+alias ranger="TERM=xterm-256color ranger -r ~/Machfiles/ranger/.config/ranger"
 alias ovim=nvim
 alias vim='XDG_CONFIG_HOME=~/.nvimconfig  nvim'
 alias vi=vim
