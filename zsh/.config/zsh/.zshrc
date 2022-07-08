@@ -1,10 +1,10 @@
 #!/bin/sh
 # ZDOTDIR
 HISTFILE=~/.zsh_history
-setopt appendhistory
+setopt incappendhistory
+setopt sharehistory
 
 # some useful options (man zshoptions)
-#setopt autocd extendedglob nomatch menucomplete
 setopt autocd extendedglob nomatch 
 setopt interactive_comments
 stty stop undef		# Disable ctrl-s to freeze terminal.
